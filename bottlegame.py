@@ -16,7 +16,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
     time.sleep(10)
 
     while(True):
-    
+
 
         # Tell the head motor up to face the players
         robot.move_head(5)
@@ -32,7 +32,7 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
         #Cozmo lights setup
         cube1 = robot.world.get_light_cube(LightCube1Id)  # looks like a paperclip
-       
+
         if cube1 is not None:
             cube1.set_lights(cozmo.lights.green_light)
         else:
@@ -46,13 +46,13 @@ def cozmo_program(robot: cozmo.robot.Robot):
 
         #After the tap we can print the random values
         print("Random time: "+str(randomtime)+" seconds")
-        print("Random speed: "+str(randomspeed)+" mm/s") 
+        print("Random speed: "+str(randomspeed)+" mm/s")
 
         if randomturn>=0:
             randomturn=1
             print("AntiClockwise")
         else:
-            randormturn=-1
+            randomturn=-1
             print("Clockwise")
 
 
